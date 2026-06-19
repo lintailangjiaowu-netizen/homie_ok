@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜Acto Works</title>
+  <meta name="description" content="ホームページ制作の無料相談はこちら。「何から始めればいいか分からない」段階でも大丈夫。お気軽にお問い合わせください。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true"><div class="bg-grid"></div><div class="bg-glow bg-glow--cyan"></div><div class="bg-glow bg-glow--purple"></div><div class="bg-glow bg-glow--blue"></div></div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">Acto&nbsp;<span>Works</span></a>
+      <button class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">ホーム</a>
+        <a href="service.html">サービス</a>
+        <a href="reasons.html">選ばれる理由</a>
+        <a href="flow.html">制作の流れ</a>
+        <a href="price.html">料金</a>
+        <a href="faq.html">よくある質問</a>
+      </nav>
+      <a href="contact.html" class="btn btn--grad btn--small is-current">無料相談</a>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="breadcrumb"><a href="index.html">ホーム</a><span>›</span>お問い合わせ</p>
+      <p class="page-hero__eyebrow">CONTACT</p>
+      <h1>お問い合わせ</h1>
+      <!-- 無料相談を促す、やさしく背中を押す文章 -->
+      <p>「ホームページのこと、何も分からなくて不安…」そんな状態でまったく問題ありません。話を聞いてもらうだけでも大丈夫。まずは気軽に、最初の一歩を踏み出してみませんか。ご相談・お見積りはすべて無料です。</p>
+    </div>
+  </section>
+
+  <!-- ウェルカム写真 -->
+  <section class="section" style="padding:10px 0 0;">
+    <div class="container container--narrow">
+      <!-- 【お問い合わせの写真】やさしい相談・サポートを感じる写真。差し替え時は src を変更 -->
+      <img class="cta__photo fade-zoom" style="border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);max-height:320px;" src="https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?auto=format&fit=crop&w=1200&q=80" alt="笑顔で相談に応じる担当者">
+    </div>
+  </section>
+
+  <!-- 連絡先の情報カード -->
+  <section class="section" style="padding:30px 0 0;" id="contact">
+    <div class="container container--narrow">
+      <div class="contact__info-grid">
+        <div class="card glass info-card fade-in"><div class="info-ic">✉</div><h3>メール</h3><p>24時間受付<strong>info.actoworks@gmail.com</strong></p></div>
+        <div class="card glass info-card fade-in"><div class="info-ic">☎</div><h3>電話（どちらでも可）</h3><p>毎日 9:00–18:00<strong>080-6102-8704</strong><strong>080-1413-0006</strong></p></div>
+        <div class="card glass info-card fade-in"><div class="info-ic">◷</div><h3>返信目安</h3><p>お問い合わせから<strong>1営業日以内</strong></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせフォーム -->
+  <section class="contact section" style="padding-top:30px;">
+    <div class="container container--narrow">
+      <p class="section__subtitle fade-in">下のフォームからお気軽にご連絡ください。いただいた内容をもとに、担当者よりご返信します。</p>
+      <!-- 本番では form の action="..." に送信先（メール送信プログラム等）を設定してください -->
+      <form class="contact__form card glass fade-in" onsubmit="return handleSubmit(event)">
+        <label>お名前 <span class="req">必須</span><input type="text" name="name" placeholder="例：山田 太郎" required></label>
+        <label>事業所名<input type="text" name="company" placeholder="例：やさしい訪問介護ステーション"></label>
+        <label>メールアドレス <span class="req">必須</span><input type="email" name="email" placeholder="例：info@example.com" required></label>
+        <label>電話番号<input type="tel" name="tel" placeholder="例：090-1234-5678"></label>
+        <label>ご相談内容<textarea name="message" rows="5" placeholder="お困りごとや、やりたいことを自由にご記入ください。まとまっていなくて大丈夫です。"></textarea></label>
+        <!-- 迷惑メール（ボット）対策のおとり項目。人には見えません。ここが入力されていたら送信を無効にします（script.js） -->
+        <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="btn btn--grad btn--full">この内容で送信する</button>
+        <p class="contact__note" id="formNote"></p>
+      </form>
+      <!-- 迷惑メール対策の案内 -->
+      <p class="contact__spamnote">※ 迷惑メール対策のため、当方からの返信（info.actoworks@gmail.com）が迷惑メールフォルダに振り分けられる場合があります。受信できるよう設定をお願いします。</p>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container footer__inner"><div><p class="footer__logo">Acto&nbsp;<span>Works</span></p><p class="footer__tag">訪問介護・福祉事業者のための低価格Web制作</p></div><p class="footer__copy">© 2026 Acto Works. All rights reserved.</p></div></footer>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <script src="script.js"></script>
+</body>
+</html>
